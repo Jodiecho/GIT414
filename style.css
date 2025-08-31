@@ -1,0 +1,40 @@
+/* Global */
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+header, nav, main, footer { padding: 1rem; }
+
+/* Medium screens */
+@media only screen and (min-width: 600px) {
+ nav ul { display: flex; gap: 1rem; }
+ main {background: yellow;}
+ body { background-color: lightgray; }
+}
+
+/* Large screens */
+@media only screen and (min-width: 900px) {
+ body { max-width: 900px; margin: auto; background-color: white; }
+ h1 { font-size: 3rem; }
+ main {background: blue; color: white;}
+}
+
+/* Extra large */
+@media only screen and (min-width: 1200px) {
+  main {background: red; color: white;}
+  body { background-color: lightgray; }
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: .5rem;
+}
+
+nav li::after {
+  content: "|";
+  margin-left: .5rem;
+}
+
+nav li:last-child::after {
+  content: "";
+}
